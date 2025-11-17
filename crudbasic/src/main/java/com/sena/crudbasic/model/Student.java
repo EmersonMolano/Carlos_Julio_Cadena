@@ -1,7 +1,4 @@
 package com.sena.crudbasic.model;
-
-import org.hibernate.annotations.ManyToAny;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,10 +18,8 @@ public class Student {
 	//indicar que el campo es una columna
 	@Column(name="id_student")
 	private int id;
-	
 	@Column(name="name", length = 50)
 	private String name;
-	
 	@ManyToOne
 	@JoinColumn(name="id_course")//name="nombre llave primaria"
 	private Course course;

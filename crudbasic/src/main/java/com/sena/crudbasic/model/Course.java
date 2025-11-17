@@ -1,13 +1,10 @@
 package com.sena.crudbasic.model;
-
 import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
 import jakarta.persistence.OneToMany;
 
 @Entity(name="course")
@@ -25,6 +22,5 @@ public class Course {
 		
 		@OneToMany(mappedBy = "course")
 		private List<Student> students;
-		
 
 }
